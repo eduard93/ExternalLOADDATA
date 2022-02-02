@@ -14,10 +14,7 @@ RUN \
   zn "USER" \
   do $SYSTEM.OBJ.LoadDir("/tmp", "ck", , 1) \
   do ##class(%File).RemoveDirectoryTree("/tmp") \
-  set g = ##class(%Net.Remote.ObjectGateway).%OpenId("%Java Server") \
-  set g.Port = 55555 \
-  set g.Server = "jgw" \
-  set sc = g.%Save()
+  set sc = $system.external.modifyServer({"Name":"%Java Server","Server":"jgw","Port":55555})
 
 # bringing the standard shell back
 SHELL ["/bin/bash", "-c"]
