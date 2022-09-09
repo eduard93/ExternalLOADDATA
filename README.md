@@ -12,9 +12,3 @@ INTO dc.Request(Text, Topic) VALUES (Text, Topic)
 USING {"from":{"file":{"header":"1"}}}
 ```
 
-4. Confirm error:
-
-```
-[SQLCODE: <-400>:<Fatal error occurred>]
-[%msg: <java.lang.NoSuchFieldError: EMPTY_STRING_AS_NULL>]
-```
